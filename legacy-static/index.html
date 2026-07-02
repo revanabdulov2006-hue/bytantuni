@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BY TANTUNI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="loading-screen">
+  <div class="loader-logo display">BY TANTUNI</div>
+  <div class="loader-bar"></div>
+</div>
+
+<nav id="topnav">
+  <div class="brand"><span class="dot"></span>BY TANTUNI</div>
+  <div class="nav-actions">
+    <button class="icon-btn" id="search-btn" title="Axtar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    </button>
+    <button class="icon-btn" id="wa-quick" title="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.55L3 21l2.05-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+    </button>
+    <button class="icon-btn" id="cart-btn" title="Səbət">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="20" r="1.4" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.4" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 10.2A2 2 0 0 0 8.57 16H17a2 2 0 0 0 2-1.7L20.5 7H6"/></svg>
+      <span class="cart-badge" id="cart-badge">0</span>
+    </button>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="hero-bg" id="hero-bg-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">By Tantuni</div>
+    <h1 class="hero-title display">Tantuni Bizim<br>İşimiz</h1>
+    <p class="hero-slogan">Xırdalan &amp; Masazır · Pulsuz çatdırılma · WhatsApp ilə sifariş</p>
+    <a href="#menu" class="btn-primary">
+      Menyuya Bax
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </div>
+  <div class="scroll-hint"><span class="chevron"></span></div>
+</header>
+
+<div id="catnav-wrap">
+  <div id="catnav"></div>
+</div>
+
+<div id="featured-wrap"></div>
+
+<main id="menu"></main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand display">BY TANTUNI</div>
+      <p class="footer-tagline">Biz tantuni sənətini butik yanaşma ilə birləşdirərək ən yüksək keyfiyyətli xidmət təklif edirik.</p>
+      <div class="delivery-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17h13V6H3v11Zm13-7h4l3 3v4h-7v-7Z"/><circle cx="7.5" cy="17.5" r="1.7" fill="currentColor"/><circle cx="17.5" cy="17.5" r="1.7" fill="currentColor"/></svg>
+        Pulsuz çatdırılma
+      </div>
+      <div class="footer-social">
+        <a class="icon-btn" href="https://instagram.com/behruz_chef" target="_blank" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a class="icon-btn" href="https://tiktok.com/@behruz_chef" target="_blank" title="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 3v9.5a3.5 3.5 0 1 1-3-3.46V6c2 1 3 1.6 5 1.8V5c-1-.2-1.6-.7-2-2Z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Filiallarımız</h4>
+      <ul class="footer-list" id="footer-branches"></ul>
+    </div>
+    <div>
+      <h4>Sifariş &amp; Dəstək</h4>
+      <ul class="footer-list" id="footer-contact"></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> BY TANTUNI. Bütün hüquqlar qorunur. Sevgi ilə hazırlanıb.</span>
+    <a href="#" id="admin-link">Admin</a>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div id="cart-overlay">
+  <div id="cart-drawer">
+    <div class="cart-head">
+      <h3>Səbətiniz</h3>
+      <button class="icon-btn" id="cart-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-foot" id="cart-foot"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="product-modal"></div>
+<div class="modal-overlay" id="checkout-modal"></div>
+<div class="panel-overlay" id="favorites-panel"></div>
+<div class="panel-overlay" id="profile-panel"></div>
+<div id="search-overlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="search-input" placeholder="Məhsul axtar...">
+      <button class="icon-btn" id="search-close" style="width:32px;height:32px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div id="toast"><span class="dot"></span><span id="toast-text"></span></div>
+
+<nav id="bottom-tabbar">
+  <button class="tab-item active" id="tab-home">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg>
+    Home
+  </button>
+  <button class="tab-item" id="tab-fav">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-9.3-9A5.4 5.4 0 0 1 12 6a5.4 5.4 0 0 1 9.3 6c-2.3 4.5-9.3 9-9.3 9Z"/></svg>
+    Favorites
+  </button>
+  <button class="tab-fab" id="tab-fab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+  <button class="tab-item" id="tab-cart">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="20" r="1.4" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.4" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 10.2A2 2 0 0 0 8.57 16H17a2 2 0 0 0 2-1.7L20.5 7H6"/></svg>
+    Cart
+    <span class="tab-badge" id="tab-cart-badge" style="display:none;">0</span>
+  </button>
+  <button class="tab-item" id="tab-profile">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c1.5-3.5 5-5 7.5-5s6 1.5 7.5 5"/></svg>
+    Profile
+  </button>
+</nav>
+
+<div id="admin-overlay"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
